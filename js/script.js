@@ -40,6 +40,7 @@ diceGeneratorButton.addEventListener("click",
             winnerChecker = 'THAT IS A TIE!: ' + playerDice + ' = ' + computerDice;
         }
         console.log(winnerChecker); //stampa risultato in console
+        console.log(''); //stampa uno spazio vuoto in console
         document.getElementById('winner-space').innerHTML = winnerChecker; //stampa risultato nel DOM
     }
 )
