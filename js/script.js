@@ -44,5 +44,3 @@ diceGeneratorButton.addEventListener("click",
     }
 )
 
-
-// let diceGeneratorButton = document.getElementById('dice-generator');

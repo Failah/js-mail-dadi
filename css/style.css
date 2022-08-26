@@ -1,3 +1,5 @@
+/* general */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +8,18 @@
 
 body {
     font-family: Verdana, sans-serif;
+}
+
+
+/* contents */
+
+.vs-bg-green {
+    background-color: #166923;
+}
+
+
+/* effects */
+
+#dice-generator:active {
+    transform: scale(0.95);
 }
