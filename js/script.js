@@ -35,7 +35,7 @@ diceGeneratorButton.addEventListener("click",
         if (playerDice > computerDice) {
             winnerChecker = 'YOU WON!: ' + playerDice + ' > ' + computerDice;
         } if (playerDice < computerDice) {
-            winnerChecker = 'COMPUTER WON!: ' + computerDice + ' > ' + playerDice;
+            winnerChecker = 'COMPUTER WON!: ' + playerDice + ' < ' + computerDice;
         } if (playerDice === computerDice) {
             winnerChecker = 'THAT IS A TIE!: ' + playerDice + ' = ' + computerDice;
         }
