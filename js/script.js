@@ -14,24 +14,35 @@ console.log('JS OK!')
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 // Buon lavoro e buon divertimento!
 
-// genera numero casuale tra 1-6 per player
-let playerDice = Math.ceil(Math.random() * 6);
-console.log('player dice value:', playerDice);
-
-// genera numero casuale tra 1-6 per computer
-let computerDice = Math.ceil(Math.random() * 6);
-console.log('computer dice value:', computerDice);
+let diceGeneratorButton = document.getElementById('dice-generator');
 
 // confronta i 2 volari casuali e stabilisce chi vince
-let winnerChecker = '';
-if (playerDice > computerDice) {
-    winnerChecker = 'YOU WON!: ' + playerDice + ' > ' + computerDice; //stampa risultato in console
-} if (playerDice < computerDice) {
-    winnerChecker = 'COMPUTER WON!: ' + computerDice + ' > ' + playerDice; //stampa risultato in console
-} if (playerDice === computerDice) {
-    winnerChecker = 'THAT IS A TIE!: ' + playerDice + ' = ' + computerDice; //stampa risultato in console
-}
-console.log(winnerChecker);
+diceGeneratorButton.addEventListener("click",
+    function () {
+
+        let winnerChecker = '';
+
+        // genera numero casuale tra 1-6 per player
+        let playerDice = Math.ceil(Math.random() * 6);
+        console.log('player dice value:', playerDice); //stampa dado player in console
+        document.getElementById('player-dice').innerHTML = playerDice; //stampa dado player nel DOM
+
+        // genera numero casuale tra 1-6 per computer
+        let computerDice = Math.ceil(Math.random() * 6);
+        console.log('computer dice value:', computerDice); //stampa dado computer in console
+        document.getElementById('computer-dice').innerHTML = computerDice; //stampa dado computer nel DOM
+
+        if (playerDice > computerDice) {
+            winnerChecker = 'YOU WON!: ' + playerDice + ' > ' + computerDice;
+        } if (playerDice < computerDice) {
+            winnerChecker = 'COMPUTER WON!: ' + computerDice + ' > ' + playerDice;
+        } if (playerDice === computerDice) {
+            winnerChecker = 'THAT IS A TIE!: ' + playerDice + ' = ' + computerDice;
+        }
+        console.log(winnerChecker); //stampa risultato in console
+        document.getElementById('winner-space').innerHTML = winnerChecker; //stampa risultato nel DOM
+    }
+)
 
 
 // let diceGeneratorButton = document.getElementById('dice-generator');
