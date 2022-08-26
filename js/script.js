@@ -22,3 +22,16 @@ console.log('player dice value:', playerDice);
 let computerDice = Math.ceil(Math.random() * 6);
 console.log('computer dice value:', computerDice);
 
+// confronta i 2 volari casuali e stabilisce chi vince
+let winnerChecker = '';
+if (playerDice > computerDice) {
+    winnerChecker = 'YOU WON!: ' + playerDice + ' > ' + computerDice; //stampa risultato in console
+} if (playerDice < computerDice) {
+    winnerChecker = 'COMPUTER WON!: ' + computerDice + ' > ' + playerDice; //stampa risultato in console
+} if (playerDice === computerDice) {
+    winnerChecker = 'THAT IS A TIE!: ' + playerDice + ' = ' + computerDice; //stampa risultato in console
+}
+console.log(winnerChecker);
+
+
+// let diceGeneratorButton = document.getElementById('dice-generator');
