@@ -81,3 +81,33 @@ diceGeneratorButton2.addEventListener("click",
         document.getElementById('winner-space2').innerHTML = winnerChecker2; //stampa risultato nel DOM
     }
 )
+
+//BACKGROUND COLOR OPTIONS
+
+// let bgColor = document.getElementsByName('bg-selector');
+
+// bgColor.addEventListener('click',
+//     function () {
+//         let bgColorValue = '';
+
+//         if (bgColorValue.value === 'verde') {
+//             document.body.style.backgroundColor = "#166923";
+//         }
+//     }
+// )
+
+function changeColour(value) {
+    let color = document.body.style.backgroundColor;
+    switch (value) {
+        case 'green':
+            color = "#166923";
+            break;
+        case 'red':
+            color = "red";
+            break;
+        case 'blue':
+            color = "blue";
+            break;
+    }
+    document.body.style.backgroundColor = color;
+}
