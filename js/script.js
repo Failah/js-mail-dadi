@@ -14,20 +14,22 @@ console.log('JS OK!')
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 // Buon lavoro e buon divertimento!
 
+
+//VERSIONE SENZA GLI ARRAY
 let diceGeneratorButton = document.getElementById('dice-generator');
 
 // confronta i 2 volari casuali e stabilisce chi vince
 diceGeneratorButton.addEventListener("click",
     function () {
-
+        console.log('NON-ARRAY VERSION:');
         let winnerChecker = '';
 
-        // genera numero casuale tra 1-6 per player
+        //genera numero casuale tra 1-6 per player
         let playerDice = Math.ceil(Math.random() * 6);
         console.log('player dice value:', playerDice); //stampa dado player in console
         document.getElementById('player-dice').innerHTML = playerDice; //stampa dado player nel DOM
 
-        // genera numero casuale tra 1-6 per computer
+        //genera numero casuale tra 1-6 per computer
         let computerDice = Math.ceil(Math.random() * 6);
         console.log('computer dice value:', computerDice); //stampa dado computer in console
         document.getElementById('computer-dice').innerHTML = computerDice; //stampa dado computer nel DOM
@@ -45,3 +47,37 @@ diceGeneratorButton.addEventListener("click",
     }
 )
 
+
+//VERSIONE CON GLI ARRAY
+
+let diceGeneratorButton2 = document.getElementById('dice-generator2');
+
+const diceNumbers2 = ['1', '2', '3', '4', '5', '6'];
+
+diceGeneratorButton2.addEventListener("click",
+    function () {
+        console.log('ARRAY VERSION:');
+        let winnerChecker2 = '';
+
+        //genera numero casuale tra 1-6 per player
+        let playerDice2 = diceNumbers2[Math.floor(Math.random() * diceNumbers2.length)];
+        console.log('player dice value:', playerDice2); //stampa dado player in console
+        document.getElementById('player-dice2').innerHTML = playerDice2; //stampa dado player nel DOM
+
+        //genera numero casuale tra 1-6 per computer
+        let computerDice2 = diceNumbers2[Math.floor(Math.random() * diceNumbers2.length)];
+        console.log('computer dice value:', computerDice2); //stampa dado computer in console
+        document.getElementById('computer-dice2').innerHTML = computerDice2; //stampa dado computer nel DOM
+
+        if (playerDice2 > computerDice2) {
+            winnerChecker2 = 'YOU WON!: ' + playerDice2 + ' > ' + computerDice2;
+        } if (playerDice2 < computerDice2) {
+            winnerChecker2 = 'COMPUTER WON!: ' + playerDice2 + ' < ' + computerDice2;
+        } if (playerDice2 === computerDice2) {
+            winnerChecker2 = 'THAT IS A TIE!: ' + playerDice2 + ' = ' + computerDice2;
+        }
+        console.log(winnerChecker2); //stampa risultato in console
+        console.log(''); //stampa uno spazio vuoto in console
+        document.getElementById('winner-space2').innerHTML = winnerChecker2; //stampa risultato nel DOM
+    }
+)
