@@ -84,18 +84,6 @@ diceGeneratorButton2.addEventListener("click",
 
 //BACKGROUND COLOR OPTIONS
 
-// let bgColor = document.getElementsByName('bg-selector');
-
-// bgColor.addEventListener('click',
-//     function () {
-//         let bgColorValue = '';
-
-//         if (bgColorValue.value === 'verde') {
-//             document.body.style.backgroundColor = "#166923";
-//         }
-//     }
-// )
-
 function changeColour(value) {
     let color = document.body.style.backgroundColor;
     switch (value) {

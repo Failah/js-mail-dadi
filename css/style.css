@@ -17,6 +17,14 @@ body {
     background-color: #166923;
 }
 
+.form-check {
+    margin-bottom: 0px !important;
+}
+
+h5 {
+    margin-bottom: 0px !important;
+}
+
 
 /* effects */
 
