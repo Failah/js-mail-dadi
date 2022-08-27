@@ -23,3 +23,7 @@ body {
 #dice-generator:active {
     transform: scale(0.95);
 }
+
+#dice-generator2:active {
+    transform: scale(0.95);
+}
