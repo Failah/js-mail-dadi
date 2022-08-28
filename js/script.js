@@ -17,6 +17,8 @@ console.log('JS OK!')
 
 //VERSIONE SENZA GLI ARRAY
 let diceGeneratorButton = document.getElementById('dice-generator');
+let userScorePoints = 0;
+let computerScorePoints = 0;
 
 // confronta i 2 volari casuali e stabilisce chi vince
 diceGeneratorButton.addEventListener("click",
@@ -36,14 +38,20 @@ diceGeneratorButton.addEventListener("click",
 
         if (playerDice > computerDice) {
             winnerChecker = 'YOU WON!: ' + playerDice + ' > ' + computerDice;
+            userScorePoints = userScorePoints + 1;
+            document.getElementById('user-score').innerHTML = userScorePoints; //tiene traccia delle vittorie del giocatore nel DOM
         } if (playerDice < computerDice) {
             winnerChecker = 'COMPUTER WON!: ' + playerDice + ' < ' + computerDice;
+            computerScorePoints = computerScorePoints + 1;
+            document.getElementById('computer-score').innerHTML = computerScorePoints; //tiene traccia delle vittorie del computer nel DOM
         } if (playerDice === computerDice) {
             winnerChecker = 'THAT IS A TIE!: ' + playerDice + ' = ' + computerDice;
         }
         console.log(winnerChecker); //stampa risultato in console
         console.log(''); //stampa uno spazio vuoto in console
         document.getElementById('winner-space').innerHTML = winnerChecker; //stampa risultato nel DOM
+
+
     }
 )
 
@@ -51,6 +59,8 @@ diceGeneratorButton.addEventListener("click",
 //VERSIONE CON GLI ARRAY
 
 let diceGeneratorButton2 = document.getElementById('dice-generator2');
+let userScorePoints2 = 0;
+let computerScorePoints2 = 0;
 
 const diceNumbers2 = ['1', '2', '3', '4', '5', '6'];
 
@@ -71,8 +81,12 @@ diceGeneratorButton2.addEventListener("click",
 
         if (playerDice2 > computerDice2) {
             winnerChecker2 = 'YOU WON!: ' + playerDice2 + ' > ' + computerDice2;
+            userScorePoints2 = userScorePoints2 + 1;
+            document.getElementById('user-score2').innerHTML = userScorePoints2; //tiene traccia delle vittorie del giocatore nel DOM
         } if (playerDice2 < computerDice2) {
             winnerChecker2 = 'COMPUTER WON!: ' + playerDice2 + ' < ' + computerDice2;
+            computerScorePoints2 = computerScorePoints2 + 1;
+            document.getElementById('computer-score2').innerHTML = computerScorePoints2; //tiene traccia delle vittorie del computer nel DOM
         } if (playerDice2 === computerDice2) {
             winnerChecker2 = 'THAT IS A TIE!: ' + playerDice2 + ' = ' + computerDice2;
         }

@@ -13,124 +13,156 @@
 </head>
 
 <body class="container py-5 vs-bg-green">
-    <button class="btn btn-light mb-5" id="options-button">Opzioni</button>
+    <button class="btn btn-light mb-3" id="options-button">Options</button>
 
-    <div class="row justify-content-center mb-5 py-2 vs-display-non" id="options-bar">
-        <div class="row">
-            <h5 class="col-3">Colore Sfondo:</h5>
+    <div class="row justify-content-center mb-5 py-2 vs-display-none" id="options-bar">
+        <div class="row mb-3">
+            <h5 class="col-3">BG Color:</h5>
             <div class="form-check col-2">
                 <input class="form-check-input" type="radio" name="bg-selector" id="greenradio" value="green"
                     onClick="changeColor('green')" checked>
                 <label class="form-check-label" for="greenradio">
-                    Verde
+                    Green
                 </label>
             </div>
             <div class="form-check col-2">
                 <input class="form-check-input" type="radio" name="bg-selector" id="redradio" value="red"
                     onClick="changeColor('red')">
                 <label class="form-check-label" for="redradio">
-                    Rosso
+                    Red
                 </label>
             </div>
             <div class="form-check col-2">
                 <input class="form-check-input" type="radio" name="bg-selector" id="blueradio" value="blue"
                     onClick="changeColor('blue')">
                 <label class="form-check-label" for="blueradio">
-                    Azzurro
+                    Blue
                 </label>
             </div>
         </div>
 
         <div class="row">
-            <h5 class="col-3">Colore Testo:</h5>
+            <h5 class="col-3">Text Color:</h5>
             <div class="form-check col-2">
                 <input class="form-check-input" type="radio" name="color-selector" id="whitetext" value="white"
                     onClick="changeText('white')" checked>
                 <label class="form-check-label" for="whitetext">
-                    Bianco
+                    White
                 </label>
             </div>
             <div class="form-check col-2">
                 <input class="form-check-input" type="radio" name="color-selector" id="yellowtext" value="yellow"
                     onClick="changeText('yellow')">
                 <label class="form-check-label" for="yellowtext">
-                    Giallo
+                    Yellow
                 </label>
             </div>
             <div class="form-check col-2">
                 <input class="form-check-input" type="radio" name="color-selector" id="blacktext" value="black"
                     onClick="changeText('black')">
                 <label class="form-check-label" for="blacktext">
-                    Nero
+                    Black
                 </label>
             </div>
         </div>
-
     </div>
 
     <hr class="border my-5">
 
-    <h2 class="text-center mb-5">NON-ARRAY VERSION</h2>
-    <div class="row mb-5">
-        <div class="col-2">
-            Player Dice
+    <div class="container">
+        <h2 class="text-center mb-5">NON-ARRAY VERSION</h2>
+        <div class="row">
+            <div class="row col-6">
+                <div class="row mb-5">
+                    <div class="col-4">
+                        Player Dice
+                    </div>
+                    <div class="col-4" id="player-dice">
+                        ?
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-4">
+                        Computer Dice
+                    </div>
+                    <div class="col-4" id="computer-dice">
+                        ?
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-light mb-5" id="dice-generator">
+                        Generate Dice
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        RESULT:
+                    </div>
+                    <div class="col" id="winner-space"></div>
+                </div>
+            </div>
+            <div class="row col-6">
+                <div class="col-6">
+                    <div class="text-center">USER SCORE</div>
+                    <div class="text-center h4 mt-2" id="user-score">0</div>
+                </div>
+                <div class="col-6">
+                    <div class="text-center">COMPUTER SCORE</div>
+                    <div class="text-center h4 mt-2" id="computer-score">0</div>
+                </div>
+            </div>
         </div>
-        <div class="col-2" id="player-dice">
-            ?
-        </div>
-    </div>
-    <div class="row mb-5">
-        <div class="col-2">
-            Computer Dice
-        </div>
-        <div class="col-2" id="computer-dice">
-            ?
-        </div>
-    </div>
-    <div>
-        <button type="button" class="btn btn-light mb-5" id="dice-generator">
-            Generate Dice
-        </button>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            RESULT:
-        </div>
-        <div class="col" id="winner-space"></div>
     </div>
 
     <hr class="border my-5">
 
-    <h2 class="text-center mb-5">ARRAY VERSION</h2>
-    <div class="row mb-5">
-        <div class="col-2">
-            Player Dice
+    <div class="container">
+        <h2 class="text-center mb-5">ARRAY VERSION</h2>
+        <div class="row">
+            <div class="row col-6">
+                <div class="row mb-5">
+                    <div class="col-4">
+                        Player Dice
+                    </div>
+                    <div class="col-4" id="player-dice2">
+                        ?
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-4">
+                        Computer Dice
+                    </div>
+                    <div class="col-4" id="computer-dice2">
+                        ?
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-light mb-5" id="dice-generator2">
+                        Generate Dice
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        RESULT:
+                    </div>
+                    <div class="col" id="winner-space2"></div>
+                </div>
+            </div>
+            <div class="row col-6">
+                <div class="col-6">
+                    <div class="text-center">USER SCORE</div>
+                    <div class="text-center h4 mt-2" id="user-score2">0</div>
+                </div>
+                <div class="col-6">
+                    <div class="text-center">COMPUTER SCORE</div>
+                    <div class="text-center h4 mt-2" id="computer-score2">0</div>
+                </div>
+            </div>
         </div>
-        <div class="col-2" id="player-dice2">
-            ?
-        </div>
-    </div>
-    <div class="row mb-5">
-        <div class="col-2">
-            Computer Dice
-        </div>
-        <div class="col-2" id="computer-dice2">
-            ?
-        </div>
-    </div>
-    <div>
-        <button type="button" class="btn btn-light mb-5" id="dice-generator2">
-            Generate Dice
-        </button>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            RESULT:
-        </div>
-        <div class="col" id="winner-space2"></div>
     </div>
 
     <hr class="border my-5">
+
 </body>
 
 </html>
