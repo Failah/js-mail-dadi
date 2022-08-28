@@ -105,7 +105,7 @@ optionsButton.addEventListener('click',
 
 //BACKGROUND COLOR OPTIONS
 
-function changeColour(value) {
+function changeColor(value) {
     let color = document.body.style.backgroundColor;
     switch (value) {
         case 'green':
@@ -121,3 +121,21 @@ function changeColour(value) {
     document.body.style.backgroundColor = color;
 }
 
+
+//TEXT COLOR OPTIONS
+
+function changeText(value) {
+    let textColor = document.body.style.color;
+    switch (value) {
+        case 'white':
+            textColor = "white";
+            break;
+        case 'yellow':
+            textColor = "yellow";
+            break;
+        case 'black':
+            textColor = "black";
+            break;
+    }
+    document.body.style.color = textColor;
+}

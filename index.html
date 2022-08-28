@@ -12,32 +12,60 @@
     <title>DiceValerio</title>
 </head>
 
-<body class="container py-5 text-white vs-bg-green">
+<body class="container py-5 vs-bg-green">
     <button class="btn btn-light mb-5" id="options-button">Opzioni</button>
 
-    <div class="row justify-content-center mb-5 py-2 vs-display-none" id="options-bar">
-        <h5 class="col-3">Seleziona Sfondo:</h5>
-        <div class="form-check col-2">
-            <input class="form-check-input" type="radio" name="bg-selector" id="greenradio" value="green"
-                onClick="changeColour('green')" checked>
-            <label class="form-check-label" for="greenradio">
-                Verde
-            </label>
+    <div class="row justify-content-center mb-5 py-2 vs-display-non" id="options-bar">
+        <div class="row">
+            <h5 class="col-3">Colore Sfondo:</h5>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="bg-selector" id="greenradio" value="green"
+                    onClick="changeColor('green')" checked>
+                <label class="form-check-label" for="greenradio">
+                    Verde
+                </label>
+            </div>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="bg-selector" id="redradio" value="red"
+                    onClick="changeColor('red')">
+                <label class="form-check-label" for="redradio">
+                    Rosso
+                </label>
+            </div>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="bg-selector" id="blueradio" value="blue"
+                    onClick="changeColor('blue')">
+                <label class="form-check-label" for="blueradio">
+                    Azzurro
+                </label>
+            </div>
         </div>
-        <div class="form-check col-2">
-            <input class="form-check-input" type="radio" name="bg-selector" id="redradio" value="red"
-                onClick="changeColour('red')">
-            <label class="form-check-label" for="redradio">
-                Rosso
-            </label>
+
+        <div class="row">
+            <h5 class="col-3">Colore Testo:</h5>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="color-selector" id="whitetext" value="white"
+                    onClick="changeText('white')" checked>
+                <label class="form-check-label" for="whitetext">
+                    Bianco
+                </label>
+            </div>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="color-selector" id="yellowtext" value="yellow"
+                    onClick="changeText('yellow')">
+                <label class="form-check-label" for="yellowtext">
+                    Giallo
+                </label>
+            </div>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="color-selector" id="blacktext" value="black"
+                    onClick="changeText('black')">
+                <label class="form-check-label" for="blacktext">
+                    Nero
+                </label>
+            </div>
         </div>
-        <div class="form-check col-2">
-            <input class="form-check-input" type="radio" name="bg-selector" id="blueradio" value="blue"
-                onClick="changeColour('blue')">
-            <label class="form-check-label" for="blueradio">
-                Azzurro
-            </label>
-        </div>
+
     </div>
 
     <hr class="border my-5">
