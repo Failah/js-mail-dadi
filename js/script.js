@@ -82,6 +82,27 @@ diceGeneratorButton2.addEventListener("click",
     }
 )
 
+//OPTIONS MENU POP UP
+
+let optionsButton = document.getElementById('options-button');
+let opt = 1;
+
+optionsButton.addEventListener('click',
+    function () {
+        switch (opt) {
+            case 1:
+                document.getElementById('options-bar').style.display = "flex";
+                opt = opt + 1;
+                break;
+            case 2:
+                document.getElementById('options-bar').style.display = "none";
+                opt = opt - 1;
+                break;
+        }
+    }
+)
+
+
 //BACKGROUND COLOR OPTIONS
 
 function changeColour(value) {
@@ -99,3 +120,4 @@ function changeColour(value) {
     }
     document.body.style.backgroundColor = color;
 }
+

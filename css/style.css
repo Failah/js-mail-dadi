@@ -13,8 +13,20 @@ body {
 
 /* contents */
 
+.vs-display-flex {
+    display: flex;
+}
+
+.vs-display-none {
+    display: none;
+}
+
 .vs-bg-green {
     background-color: #166923;
+}
+
+#options-bar {
+    border: 2px solid white;
 }
 
 .form-check {
@@ -33,5 +45,9 @@ h5 {
 }
 
 #dice-generator2:active {
+    transform: scale(0.95);
+}
+
+#options-button:active {
     transform: scale(0.95);
 }

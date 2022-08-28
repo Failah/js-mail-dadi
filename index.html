@@ -13,33 +13,34 @@
 </head>
 
 <body class="container py-5 text-white vs-bg-green">
+    <button class="btn btn-light mb-5" id="options-button">Opzioni</button>
 
-    <div class="row justify-content-center mb-5 py-2" style="
-        border: 2px solid white;
-    ">
+    <div class="row justify-content-center mb-5 py-2 vs-display-none" id="options-bar">
         <h5 class="col-3">Seleziona Sfondo:</h5>
         <div class="form-check col-2">
-            <input class="form-check-input" type="radio" name="bg-selector" id="exampleRadios1" value="green"
+            <input class="form-check-input" type="radio" name="bg-selector" id="greenradio" value="green"
                 onClick="changeColour('green')" checked>
-            <label class="form-check-label" for="exampleRadios1">
+            <label class="form-check-label" for="greenradio">
                 Verde
             </label>
         </div>
         <div class="form-check col-2">
-            <input class="form-check-input" type="radio" name="bg-selector" id="exampleRadios2" value="red"
+            <input class="form-check-input" type="radio" name="bg-selector" id="redradio" value="red"
                 onClick="changeColour('red')">
-            <label class="form-check-label" for="exampleRadios2">
+            <label class="form-check-label" for="redradio">
                 Rosso
             </label>
         </div>
         <div class="form-check col-2">
-            <input class="form-check-input" type="radio" name="bg-selector" id="exampleRadios3" value="blue"
+            <input class="form-check-input" type="radio" name="bg-selector" id="blueradio" value="blue"
                 onClick="changeColour('blue')">
-            <label class="form-check-label" for="exampleRadios3">
+            <label class="form-check-label" for="blueradio">
                 Azzurro
             </label>
         </div>
     </div>
+
+    <hr class="border my-5">
 
     <h2 class="text-center mb-5">NON-ARRAY VERSION</h2>
     <div class="row mb-5">
@@ -100,6 +101,8 @@
         </div>
         <div class="col" id="winner-space2"></div>
     </div>
+
+    <hr class="border my-5">
 </body>
 
 </html>
