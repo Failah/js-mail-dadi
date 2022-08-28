@@ -96,6 +96,7 @@ diceGeneratorButton2.addEventListener("click",
     }
 )
 
+
 //OPTIONS MENU POP UP
 
 let optionsButton = document.getElementById('options-button');
@@ -131,6 +132,9 @@ function changeColor(value) {
         case 'blue':
             color = "blue";
             break;
+        case 'purple':
+            color = "purple";
+            break;
     }
     document.body.style.backgroundColor = color;
 }
@@ -149,6 +153,9 @@ function changeText(value) {
             break;
         case 'black':
             textColor = "black";
+            break;
+        case 'orange':
+            textColor = "orange";
             break;
     }
     document.body.style.color = textColor;

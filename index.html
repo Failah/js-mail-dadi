@@ -20,7 +20,7 @@
         <button class="btn btn-light mb-3" id="options-button">Options</button>
     </div>
 
-    <div class="row justify-content-center mb-5 py-2 vs-display-none" id="options-bar">
+    <div class="row justify-content-center mb-5 py-2 text-white vs-display-none" id="options-bar">
         <div class="row mb-3">
             <h5 class="col-3">BG Color:</h5>
             <div class="form-check col-2">
@@ -42,6 +42,13 @@
                     onClick="changeColor('blue')">
                 <label class="form-check-label" for="blueradio">
                     Blue
+                </label>
+            </div>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="bg-selector" id="purpleradio" value="purple"
+                    onClick="changeColor('purple')">
+                <label class="form-check-label" for="purpleradio">
+                    Purple
                 </label>
             </div>
         </div>
@@ -67,6 +74,13 @@
                     onClick="changeText('black')">
                 <label class="form-check-label" for="blacktext">
                     Black
+                </label>
+            </div>
+            <div class="form-check col-2">
+                <input class="form-check-input" type="radio" name="color-selector" id="orangetext" value="orange"
+                    onClick="changeText('orange')">
+                <label class="form-check-label" for="orangetext">
+                    Orange
                 </label>
             </div>
         </div>
